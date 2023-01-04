@@ -25,7 +25,7 @@ class HomeScreen(Screen):
     cur = conn.cursor()
     cur.execute("CREATE TABLE IF NOT EXISTS weather (country_name TEXT, city_name TEXT, weather TEXT, visibility TEXT, pressure TEXT, humidity TEXT)")
 
-    firebase_url = 'https://lab2-8d41f-default-rtdb.europe-west1.firebasedatabase.app/.json'
+    firebase_url = 'add you firebase url here'
     dialog = None
     weather = StringProperty()
     description = StringProperty()
