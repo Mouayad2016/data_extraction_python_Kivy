@@ -1,0 +1,94 @@
+#:import Clock kivy.clock.Clock
+
+Screen:
+    HomeScreen:
+        id:home
+        name:'home'
+
+
+<HomeScreen>:
+    FloatLayout:
+        MDTextField:
+            mode: 'round'
+            required: True
+            helper_text_mode: "on_error"
+            helper_text: "You need to wright a city name"
+            hint_text: 'City name'
+            id : city_name
+            pos_hint:{'top':.9,'left':1}
+            size_hint: .5,.06
+        MDTextField:
+            mode: 'round'
+            required: True
+            helper_text_mode: "on_error"
+            helper_text: "You need to wright a country name"
+            hint_text: 'Country name'
+            id : country_name
+            pos_hint:{'top':.9,'right':1}
+            size_hint: .4,.06
+        MDRaisedButton:
+            text:'SEARCH'
+            pos_hint: {'top':.8,'right':.7}
+            size_hint: .5,.08
+            on_release:
+                root.search()
+
+        Label:
+            text:'Now'
+            font_size:30
+            pos_hint: {'top':.7}
+            size_hint:1,.1
+
+        Label:
+            text:root.weather
+            font_size:30
+            pos_hint:{'top':.6,'right':.7}
+            size_hint:.5,.1
+            color:0,1,1,1
+
+        Label:
+            text:'[u]Humidity[/u]'
+            markup: True
+            font_size:25
+            pos_hint:{'top':.5,'left':1}
+            size_hint:.33,.1
+            color:0,1,0,1
+
+        Label:
+            text:'[u]Pressure[/u]'
+            markup: True
+            font_size:25
+            pos_hint:{'top':.5,'right':.65}
+            size_hint:.33,.1
+            color:0,1,0,1
+
+        Label:
+            text:'[u]Visibility[/u]'
+            markup: True
+            font_size:25
+            pos_hint:{'top':.5,'right':1}
+            size_hint:.33,.1
+            color:0,1,0,1
+
+        # info
+        Label:
+            text:root.humidity
+            font_size:25
+            pos_hint:{'top':.4,'left':1}
+            size_hint:.33,.1
+            color:0,1,1,1
+
+        Label:
+            text: root.pressure
+            font_size:25
+            pos_hint:{'top':.4,'right':.65}
+            size_hint:.33,.1
+            color:0,1,1,1
+
+        Label:
+            text:root.visibility
+            font_size:25
+            pos_hint:{'top':.4,'right':1}
+            size_hint:.33,.1
+            color:0,1,1,1
+

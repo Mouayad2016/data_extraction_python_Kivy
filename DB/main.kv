@@ -1,0 +1,61 @@
+Screen:
+    HomeScreen:
+        id:home
+        name:'home'
+
+
+<HomeScreen>:
+    FloatLayout:
+        MDTextField:
+            mode: 'round'
+            hint_text: 'First and last name'
+            id : flname
+            pos_hint:{'top':.9,'left':1}
+            size_hint: .5,.06
+        MDTextField:
+            mode: 'round'
+            hint_text: 'Age'
+            id : age
+            pos_hint:{'top':.9,'right':1}
+            size_hint: .4,.06
+        MDTextField:
+            mode: 'round'
+            hint_text: 'Salary'
+            id : salary
+            pos_hint:{'top':.8,'right':.65}
+            size_hint: .4,.06
+
+        MDRaisedButton:
+            text:'Get'
+            pos_hint: {'top':.7,'right':.7}
+            size_hint: .5,.08
+            on_release:
+                root.create_get()
+
+        MDRaisedButton:
+            text:'Patch'
+            pos_hint: {'top':.6,'right':.7}
+            size_hint: .5,.08
+            on_release:
+                root.create_patch()
+
+        MDRaisedButton:
+            text:'Post'
+            pos_hint: {'top':.5,'right':.7}
+            size_hint: .5,.08
+            on_release:
+                root.create_post()
+
+        MDRaisedButton:
+            text:'Put'
+            pos_hint: {'top':.4,'right':.7}
+            size_hint: .5,.08
+            on_release:
+                root.create_put()
+
+        MDRaisedButton:
+            text:'Delete'
+            pos_hint: {'top':.3,'right':.7}
+            size_hint: .5,.08
+            on_release:
+                root.create_delete()
